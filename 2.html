@@ -87,7 +87,7 @@ button:hover{
 <div class="form-box">
     <h2>Transaction Form</h2>
 
-    <input type="text" placeholder="Description">
+    <input type="text" id="des" placeholder="Description">
 
     <input type="number" placeholder="Amount">
 
@@ -106,8 +106,8 @@ button:hover{
 </div>
     <script>
       function disp(){
-      let r=document.getElementById("sel").value;
-     document.getElementById("trans").innerHTML=r;
+      let r=document.getElementById("des").value;
+     document.getElementById("trans").innerHTML+="<br>r";
       }
         
     </script>
