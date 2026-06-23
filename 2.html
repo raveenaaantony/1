@@ -89,7 +89,7 @@ button:hover{
 
     <input type="text" id="des" placeholder="Description">
 
-    <input type="number" placeholder="Amount">
+    <input type="number" id="amt" placeholder="Amount">
 
     <select id="sel">
         <option value="income">Income</option>
@@ -107,7 +107,7 @@ button:hover{
     <script>
       function disp(){
       let r=document.getElementById("des").value;
-     document.getElementById("trans").innerHTML+="<br>r";
+     document.getElementById("trans").innerHTML+="<br>"+r;
       }
         
     </script>
