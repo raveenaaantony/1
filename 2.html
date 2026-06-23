@@ -91,19 +91,26 @@ button:hover{
 
     <input type="number" placeholder="Amount">
 
-    <select>
-        <option>Income</option>
-        <option>Expense</option>
+    <select id="sel">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
     </select>
 
     <br><br>
 
-    <button>Add Transaction</button>
+    <button id="btn" onclick="disp()">Add Transaction</button>
 </div>
 
 <div id="transaction-list">
-    <h2>Transaction List</h2>
+    <h2 id="trans">Transaction List</h2>
 </div>
+    <script>
+      function disp(){
+      let r=document.getElementById("sel").value;
+     document.getElementById("trans").innerHTML=r;
+      }
+        
+    </script>
   </body>
 </html>
     
