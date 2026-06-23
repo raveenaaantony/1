@@ -2,25 +2,35 @@
   <head>
     <title>hello</title>
     
+  <style>
+    .container{
+      width:300px;
+      margin:100px auto;
+      border:2px solid black;
+      padding:20px;
+      text-align:center;
+    }
+
+  </style>
   </head>
   <body>
-    <h1 color="pink">spendwise</h1>
+    <h1 style=" color:pink";>spendwise</h1>
     <form id="f">
       <input type="number"placeholder="balance"><br>
       <input type="number" placeholder="income"><br>
       <input type="number" placeholder="expenses"><br>
     </form>
-    <h2 color="red">tramsaction form</h2><br>
-    <form id="fo">
-      <input type="text"placeholder="description" color="blue"><br>
-      <input type="number"placeholder="amount" color="blue"><br>
+    <h2 style="color:red";>transaction form</h2><br>
+    <div id="fo" class="container">
+      <input type="text"placeholder="description" style="color:blue";><br>
+      <input type="number"placeholder="amount"style=" color:blue";><br>
       <h2>type</h2>
       <select id="sel">
         <option>income</option>
         <option>expenses</option>
       </select>
-      <button id="btn" color="blue">add transaction</button>
-    </form>
-    <h2 id="trans" color="red">transaction list</h2>
+      <button id="btn" >add transaction</button>
+    </div>
+    <h2 id="trans" style="color:red";>transaction list</h2>
   </body>
 </html>
