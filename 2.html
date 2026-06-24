@@ -79,9 +79,18 @@ button:hover{
     <h1>SpendWise</h1>
 
 <div class="summary">
-    <div class="card">Balance<br>₹0</div>
-    <div class="card">Income<br>₹0</div>
-    <div class="card">Expenses<br>₹0</div>
+    <div class="card">
+      Balance<br>
+      ₹<span id="bal">0</span>
+    </div>
+    <div class="card">
+      Income<br>
+      ₹<span id="inc">0</span>
+    </div>
+    <div class="card">
+      Expenses<br>
+      ₹<span id="exp">0</span>
+    </div>
 </div>
 
 <div class="form-box">
@@ -105,9 +114,28 @@ button:hover{
     <h2 id="trans">Transaction List</h2>
 </div>
     <script>
+      let income=0;
+      let expense=0;
+      let balance=0;
       function disp(){
       let r=document.getElementById("des").value;
      document.getElementById("trans").innerHTML+="<br>"+r;
+        let amt=Number(document.getElementById("amt").value);
+        let type=document.getElementById("sel").value;
+        if(type==="income")
+        {
+          income+=amt;
+          balance+=amt;
+        }
+        else
+        {
+          expense+=amt;
+          balance-=amt;
+        }
+        document.getElementById("inc").innerHTML=income;
+        document.getElementById("exp").innerHTML=expense;
+        document.getElementById("bal").innerHTML=balance;
+        
       }
         
     </script>
