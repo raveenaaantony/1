@@ -119,7 +119,7 @@ button:hover{
       let balance=0;
       function disp(){
       let r=document.getElementById("des").value;
-     document.getElementById("trans").innerHTML+="<br>"+r;
+     document.getElementById("trans").innerHTML+="<br>"+r+"-"+amt;
         let amt=Number(document.getElementById("amt").value);
         let type=document.getElementById("sel").value;
         if(type==="income")
